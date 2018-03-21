@@ -14,7 +14,7 @@ Load the image in Docker:
 docker load --input freefemX.XX.tar
 ```
 
-Start the Dockr image:
+Start the Docker image:
 ```bash
 docker run -ti freefem
 ```
