@@ -4,7 +4,7 @@ Docker image of [FreeFem++](http://www.freefem.org/).
 
 ## Usage
 
-Extract `freefemX.XX.tar.gz` (available in the [releases](releases/)) using:
+Extract `freefemX.XX.tar.gz` (available in the [releases](https://github.com/FreeFem/FreeFem-docker/releases)) using:
 ```bash
 gunzip freefemX.XX.tar.gz 
 ```
