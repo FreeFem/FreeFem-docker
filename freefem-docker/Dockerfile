@@ -41,7 +41,6 @@ RUN touch /root/.bash_aliases \
 	&& echo "alias FreeFem++='/usr/freefem/bin/FreeFem++'" >> /root/.bash_aliases \
 	&& echo "alias FreeFem++-mpi='/usr/freefem/bin/FreeFem++-mpi'" >> /root/.bash_aliases \
 	&& echo "alias FreeFem++-nw='/usr/freefem/bin/FreeFem++-nw'" >> /root/.bash_aliases
-	
 
-
-
+ENV GLOB *.edp
+CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} /usr/freefem/bin/FreeFem++ {}"]
