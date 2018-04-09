@@ -21,7 +21,6 @@ RUN apt-get install -y \
 	gfortran \
 	ghostscript \
 	git \
-	mercurial \
 	m4 \
 	make \
 	libopenblas-dev \
@@ -45,7 +44,7 @@ RUN apt-get install -y \
 	wget
 
 # Copy ff++ repository
-RUN hg clone http://www.freefem.org/ff++/ff++ /root/ff++
+RUN git clone https://github.com/FreeFem/FreeFem-sources.git
 
 # Compile FreeFem++
 RUN cd /root/ff++ \
