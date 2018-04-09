@@ -1,4 +1,4 @@
-[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Freefem++-docker)](https://ci.inria.fr/freefem/job/Freefem++-docker/)
+[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Freefem-docker)](https://ci.inria.fr/freefem/job/FreeFem-docker/)
 
 # FreeFem++ docker
 
@@ -15,7 +15,7 @@ Docker image of [FreeFem++](http://www.freefem.org/).
 Extract `freefemX.XX.tar.gz` (available in the [releases](https://github.com/FreeFem/FreeFem-docker/releases)) using:
 
 ```bash
-gunzip freefemX.XX.tar.gz 
+gunzip freefemX.XX.tar.gz
 ```
 
 Load the image in Docker:

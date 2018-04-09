@@ -27,7 +27,7 @@ RUN apt-get install -y \
 
 # Copy ff repository
 RUN mkdir /usr/freefem
-ADD ff++-compiled /usr/freefem
+ADD /tmp/ff++-compiled /usr/freefem
 
 # Add FreeFem++ to bashrc
 RUN touch /root/.bash_aliases \

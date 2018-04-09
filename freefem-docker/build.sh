@@ -2,11 +2,11 @@
 
 ## Copy the compiled files of FreeFem++
 echo -e "> Extracting ff++-compiled from compiled version"
-sudo docker run --rm -d freefem:compilation | xargs -I {} docker cp {}:/usr/freefem /tmp/ff++-compiled
+sudo docker run --rm -d freefem:compilation | sudo xargs -I {} docker cp {}:/usr/freefem /tmp/ff++-compiled
 
 ## Build the docker for FreeFem++ compilation
 echo -e "> Building freefem++ Docker image"
-sudo docker build -t freefem .
+sudo docker build --network=host -t freefem .
 
 ## Save the docker
 echo -e "> Saving the freefem image"
