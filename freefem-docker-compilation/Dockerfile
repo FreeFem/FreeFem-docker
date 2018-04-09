@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER Simon Garnotel "simon.garnotel@gmail.com"
+MAINTAINER Simon Garnotel "simon.garnotel@airthium.com"
 
 # Update aptitude
 RUN apt-get update && apt-get upgrade -y && apt-get clean
@@ -44,10 +44,10 @@ RUN apt-get install -y \
 	wget
 
 # Copy ff++ repository
-RUN git clone https://github.com/FreeFem/FreeFem-sources.git
+RUN git clone https://github.com/FreeFem/FreeFem-sources.git /root/FreeFem++-source
 
 # Compile FreeFem++
-RUN cd /root/ff++ \
+RUN cd /root/FreeFem++-source \
 	&& autoreconf -i \
 	&& ./configure --enable-download --enable-optim --disable-pastix --prefix=/usr/freefem/ \
 	&& ./download/getall -a \

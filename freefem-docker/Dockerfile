@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER Simon Garnotel "simon.garnotel@gmail.com"
+MAINTAINER Simon Garnotel "simon.garnotel@airthium.com"
 
 # Update aptitude
 RUN apt-get update
