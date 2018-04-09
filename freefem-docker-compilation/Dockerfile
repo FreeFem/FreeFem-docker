@@ -52,7 +52,7 @@ RUN cd /root/FreeFem++-source \
 	&& ./configure --enable-download --enable-optim --disable-pastix --prefix=/usr/freefem/ \
 	&& ./download/getall -a \
 	&& cd download/ff-petsc \
-	&& sed -e 's/--download-pastix //g' Makefile > Makefile \
+	&& sed -i 's/--download-pastix //g' Makefile \
 	&& make petsc-slepc \
 	&& cd - \
 	&& ./reconfigure \
