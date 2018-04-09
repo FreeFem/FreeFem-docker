@@ -1,4 +1,4 @@
-[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Freefem++-docker)](https://ci.inria.fr/freefem/job/Freefem++-docker/)
+[![Build Status](https://ci.inria.fr/freefem/job/Freefem++-docker/badge/icon)](https://ci.inria.fr/freefem/job/Freefem++-docker/)
 
 # FreeFem++ docker
 
