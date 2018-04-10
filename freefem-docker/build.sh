@@ -18,4 +18,4 @@ sudo docker save -o freefem.tar freefem
 
 ## Compress the image
 echo -e "> Compressing the archive"
-gzip freefem.tar
+sudo gzip freefem.tar
