@@ -1,6 +1,8 @@
-# Gmsh docker
+[![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Freefem-docker)](https://ci.inria.fr/freefem/job/FreeFem-docker/)
 
-Docker image of [Gmsh](http://gmsh.info/).
+# FreeFem++ docker
+
+Docker image of [FreeFem++](http://www.freefem.org/).
 
 <!-- TOC depthFrom:2 -->
 
@@ -10,26 +12,26 @@ Docker image of [Gmsh](http://gmsh.info/).
 
 ## Usage
 
-Extract `gmshX.XX.tar.gz` (available in the [releases](https://github.com/Tanatloc/Gmsh-docker/releases)) using:
+Extract `freefemX.XX.tar.gz` (available in the [releases](https://github.com/FreeFem/FreeFem-docker/releases)) using:
 
 ```bash
-gunzip gmshX.XX.tar.gz
+gunzip freefemX.XX.tar.gz
 ```
 
 Load the image in Docker:
 
 ```bash
-docker load --input gmshX.XX.tar
+docker load --input freefemX.XX.tar
 ```
 
 Start the Docker image in interactive mode:
 
 ```bash
-docker run -ti gmsh
+docker run -ti freefem
 ```
 
 Execute all the `*.edp` scripts available in the current directory
 
 ```bash
-docker run -v $(pwd):/data gmsh
+docker run -v $(pwd):/data freefem
 ```
