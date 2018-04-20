@@ -1,3 +1,4 @@
-freefem-docker/ff++-compiled
-freefem-docker/freefem.tar.gz
+gmsh-docker-compilation/opencascade-7.2.0.tgz
+gmsh-docker/gmsh-compiled
+gmsh-docker/gmsh.tar.gz
 build
