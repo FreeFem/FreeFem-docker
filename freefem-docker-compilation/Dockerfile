@@ -44,14 +44,14 @@ RUN apt-get install -y \
 	wget
 
 # Copy ff++ repository
-RUN git clone https://github.com/FreeFem/FreeFem-sources.git /root/FreeFem++-source -b develop
+RUN git clone https://github.com/FreeFem/FreeFem-sources.git /root/FreeFem++-source
 
 # Compile FreeFem++
 RUN cd /root/FreeFem++-source \
 	&& autoreconf -i \
-	&& ./configure --enable-download --enable-optim --prefix=/usr/freefem/ \
-	&& ./3rdparty/getall -a \
-	&& cd 3rdparty/ff-petsc \
+	&& ./configure --enable-download --enable-optim --disable-pastix --prefix=/usr/freefem/ \
+	&& ./download/getall -a \
+	&& cd download/ff-petsc \
 	&& make petsc-slepc \
 	&& cd - \
 	&& ./reconfigure \
