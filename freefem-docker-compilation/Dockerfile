@@ -49,14 +49,12 @@ RUN git clone https://github.com/FreeFem/FreeFem-sources.git /root/FreeFem++-sou
 # Compile FreeFem++
 RUN cd /root/FreeFem++-source \
 	&& autoreconf -i \
-	&& ./configure --enable-download --enable-optim --disable-pastix --prefix=/usr/freefem/ \
-	&& ./download/getall -a \
-	&& cd download/ff-petsc \
-	&& sed -i 's/--download-pastix //g' Makefile \
+	&& ./configure --enable-download --enable-optim --prefix=/usr/freefem/ \
+	&& ./3rdparty/getall -a \
+	&& cd 3rdparty/ff-petsc \
 	&& make petsc-slepc \
 	&& cd - \
 	&& ./reconfigure \
 	&& make -j24 \
 	&& make check \
 	&& make install
-
