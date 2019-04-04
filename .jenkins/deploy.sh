@@ -28,5 +28,5 @@ UPLOAD_URL=`echo $RELEASE | jq -r '.upload_url'`
 echo 'Upload URL: '$ASSETS_URL
 
 # Upload asset
-RESPONSE=`curl --data-binary @"./$FILE_NAME" -H "Authorization: token $TOKEN" -H "Content-Type: application/octet-stream" "$UPLOAD_URL=$FILE_NAME"`
+RESPONSE=`curl --data-binary "@$FILE_NAME" -H "Authorization: token $TOKEN" -H "Content-Type: application/octet-stream" "$UPLOAD_URL=$FILE_NAME"`
 echo 'Server response: '$RESPONSE
