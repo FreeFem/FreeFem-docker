@@ -1,8 +1,8 @@
 [![Build Status](https://ci.inria.fr/freefem/buildStatus/icon?job=Freefem-docker)](https://ci.inria.fr/freefem/job/FreeFem-docker/)
 
-# FreeFem++ docker
+# FreeFEM docker
 
-Docker image of [FreeFem++](http://www.freefem.org/).
+Docker image of [FreeFEM](https://freefem.org/).
 
 <!-- TOC depthFrom:2 -->
 
