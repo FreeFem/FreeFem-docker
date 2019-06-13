@@ -56,5 +56,4 @@ RUN cd /root/FreeFem++-source \
 	&& cd - \
 	&& ./reconfigure \
 	&& make -j 4 \
-	&& make check \
 	&& make install
