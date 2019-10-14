@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Save the docker
-echo -e "> Saving the freefem image"
+echo -e "> Saving the FreeFEM image"
 sudo docker save -o freefem.tar freefem
 
 ## Compress the image
