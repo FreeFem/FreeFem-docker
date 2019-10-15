@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     libhdf5-dev \
     libgsl-dev \
     libarpack2-dev \
+    libfftw3-dev \
     libnlopt-dev \
     libmpich-dev \
     patch \
@@ -64,6 +65,7 @@ RUN apt-get update && apt-get install -y \
     libhdf5-dev \
     libgsl-dev \
     libarpack2-dev \
+    libfftw3-dev \
     libnlopt-dev \
     libmpich-dev \
     && rm -rf /var/lib/apt/lists/*
