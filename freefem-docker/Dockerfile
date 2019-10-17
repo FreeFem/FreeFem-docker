@@ -4,30 +4,25 @@ LABEL maintainer="https://github.com/orgs/FreeFem/people"
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    autoconf \
     automake \
-    autotools-dev \
     bison \
     cmake \
-    cpp \
     flex \
     g++ \
-    gcc \
     gfortran \
     git \
-    m4 \
     make \
     libopenblas-dev \
-    liblapack-dev \
+    liblapack3 \
     libhdf5-dev \
     libgsl-dev \
-    libarpack2-dev \
+    libarpack2 \
     libfftw3-dev \
     libnlopt-dev \
     libmpich-dev \
     patch \
     pkg-config \
-    python \
+    python-minimal \
     unzip \
     wget \
     && rm -rf /var/lib/apt/lists/*
@@ -61,10 +56,10 @@ LABEL maintainer="https://github.com/orgs/FreeFem/people"
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     libopenblas-dev \
-    liblapack-dev \
+    liblapack3 \
     libhdf5-dev \
     libgsl-dev \
-    libarpack2-dev \
+    libarpack2 \
     libfftw3-dev \
     libnlopt-dev \
     libmpich-dev \
