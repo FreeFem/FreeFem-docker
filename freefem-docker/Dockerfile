@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 ENV DIRPATH /root/FreeFem-sources
 
 # Copy FreeFEM repository
-RUN git clone --depth 1 -b develop --single-branch https://github.com/FreeFem/FreeFem-sources.git $DIRPATH
+RUN git clone --depth 1 --single-branch https://github.com/FreeFem/FreeFem-sources.git $DIRPATH
 
 WORKDIR $DIRPATH
 
