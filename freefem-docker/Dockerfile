@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y \
     gfortran \
     git \
     make \
-    libopenblas-base \
-    liblapack3 \
+    libopenblas-dev \
     libhdf5-dev \
     libgsl-dev \
     libarpack2 \
@@ -55,8 +54,7 @@ LABEL maintainer="https://github.com/orgs/FreeFem/people"
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
-    libopenblas-base \
-    liblapack3 \
+    libopenblas-dev \
     libhdf5-dev \
     libgsl-dev \
     libarpack2 \
