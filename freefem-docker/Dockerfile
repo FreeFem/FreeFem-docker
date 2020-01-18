@@ -36,8 +36,8 @@ WORKDIR $DIRPATH
 # Configure FreeFEM and download PETSc
 RUN autoreconf -i \
     && ./configure --enable-download --enable-optim --enable-generic --prefix=/usr/freefem/ \
-        --with-lapack="/usr/lib/x86_64-linux-gnu/liblapack.so.3" \
-        --with-blas="/usr/lib/x86_64-linux-gnu/libblas.so.3" \
+        --with-lapack="/usr/lib/x86_64-linux-gnu/openblas/libblas" \
+        --with-blas="/usr/lib/x86_64-linux-gnu/libopenblas /usr/lib/x86_64-linux-gnu/openblas/liblapack" \
     && ./3rdparty/getall -o PETSc -a
 
 # Compile PETSc/SLEPc and reconfigure FreeFEM
