@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     git \
     make \
     libopenblas-base \
+    liblapack3 \
     libhdf5-dev \
     libgsl-dev \
     libarpack2 \
@@ -36,8 +37,6 @@ WORKDIR $DIRPATH
 # Configure FreeFEM and download PETSc
 RUN autoreconf -i \
     && ./configure --enable-download --enable-optim --enable-generic --prefix=/usr/freefem/ \
-        --with-lapack="/usr/lib/x86_64-linux-gnu/openblas/libblas" \
-        --with-blas="/usr/lib/x86_64-linux-gnu/libopenblas /usr/lib/x86_64-linux-gnu/openblas/liblapack" \
     && ./3rdparty/getall -o PETSc -a
 
 # Compile PETSc/SLEPc and reconfigure FreeFEM
@@ -57,6 +56,7 @@ LABEL maintainer="https://github.com/orgs/FreeFem/people"
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     libopenblas-base \
+    liblapack3 \
     libhdf5-dev \
     libgsl-dev \
     libarpack2 \
