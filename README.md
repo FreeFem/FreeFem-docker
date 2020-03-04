@@ -27,7 +27,7 @@ docker load --input freefemX.XX.tar
 Start the Docker image in interactive mode:
 
 ```bash
-docker run -ti freefem
+docker run -ti freefem bash
 ```
 
 Execute all the `*.edp` scripts available in the current directory
