@@ -81,4 +81,4 @@ RUN touch /root/.bash_aliases \
     && echo "alias FreeFem++-nw='/usr/freefem/bin/FreeFem++-nw'" >> /root/.bash_aliases
 
 ENV GLOB *.edp
-CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} ff-mpirun -n 1 {}"]
+CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} /usr/freefem/bin/ff-mpirun -n 1 {}"]
