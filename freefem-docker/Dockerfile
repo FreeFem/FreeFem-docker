@@ -67,18 +67,9 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /usr/freefem
 COPY --from=builder /usr/freefem /usr/freefem
 
-# Add FreeFEM to .bashrc
-RUN touch /root/.bash_aliases \
-    && echo "alias bamg='/usr/freefem/bin/bamg'" > /root/.bash_aliases \
-    && echo "alias cvmsh2='/usr/freefem/bin/cvmsh2'" > /root/.bash_aliases \
-    && echo "alias ff-c++='/usr/freefem/bin/ff-c++'" > /root/.bash_aliases \
-    && echo "alias ff-get-dep='/usr/freefem/bin/ff-get-dep'" > /root/.bash_aliases \
-    && echo "alias ffmaster='/usr/freefem/bin/ffmaster'" > /root/.bash_aliases \
-    && echo "alias ff-mpirun='/usr/freefem/bin/ff-mpirun'" >> /root/.bash_aliases \
-    && echo "alias ff-pkg-download='/usr/freefem/bin/ff-pkg-download'" >> /root/.bash_aliases \
-    && echo "alias FreeFem++='/usr/freefem/bin/FreeFem++'" >> /root/.bash_aliases \
-    && echo "alias FreeFem++-mpi='/usr/freefem/bin/FreeFem++-mpi'" >> /root/.bash_aliases \
-    && echo "alias FreeFem++-nw='/usr/freefem/bin/FreeFem++-nw'" >> /root/.bash_aliases
+# Add executable in PATH
+ENV PATH /usr/freefem/bin:$PATH
 
+# Default command
 ENV GLOB *.edp
 CMD ["bash", "-c", "ls /data/$GLOB | xargs -I {} /usr/freefem/bin/ff-mpirun -n 1 {}"]
