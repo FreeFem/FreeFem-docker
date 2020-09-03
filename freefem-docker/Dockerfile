@@ -2,6 +2,7 @@ FROM ubuntu AS builder
 
 LABEL maintainer="https://github.com/orgs/FreeFem/people"
 
+ARG DEBIAN_FRONTEND=noninteractive
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     automake \
