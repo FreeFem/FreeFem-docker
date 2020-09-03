@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     libmpich-dev \
     patch \
     pkg-config \
-    python-minimal \
+    python3-minimal \
     unzip \
     wget \
     && rm -rf /var/lib/apt/lists/*
