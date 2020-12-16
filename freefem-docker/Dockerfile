@@ -16,10 +16,8 @@ RUN apt-get update && apt-get install -y \
     libopenblas-dev \
     libhdf5-dev \
     libgsl-dev \
-    libarpack2 \
     libfftw3-dev \
     libnlopt-dev \
-    libmpich-dev \
     patch \
     pkg-config \
     python3-minimal \
@@ -59,10 +57,8 @@ RUN apt-get update && apt-get install -y \
     libopenblas-dev \
     libhdf5-dev \
     libgsl-dev \
-    libarpack2 \
     libfftw3-dev \
     libnlopt-dev \
-    libmpich-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy FreeFEM repository
