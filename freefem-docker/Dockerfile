@@ -40,7 +40,7 @@ RUN autoreconf -i \
 
 # Compile PETSc/SLEPc and reconfigure FreeFEM
 RUN cd $DIRPATH/3rdparty/ff-petsc \
-    && make petsc-slepc
+    && sed -i .bak 's#download-mpich#download-mpich=http://www.mpich.org/static/downloads/3.4rc1/mpich-3.4rc1.tar.gz#' Makefile && make petsc-slepc
 
 # Reconfigure and compile FreeFEM
 RUN ./reconfigure && make -j 1
