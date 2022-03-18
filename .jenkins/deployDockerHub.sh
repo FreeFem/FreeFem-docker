@@ -15,3 +15,6 @@ docker tag freefem:latest freefem/freefem:"$CURRENT_VERSION"
 # Push
 docker push freefem/freefem:latest
 docker push freefem/freefem:"$CURRENT_VERSION"
+
+# Logout
+docker logout
