@@ -1,5 +1,4 @@
 #!/bin/bash
 
-cd freefem-docker \
-	&& chmod +x ./build.sh \
+chmod +x ./build.sh \
 	&& ./build.sh
