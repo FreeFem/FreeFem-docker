@@ -43,7 +43,7 @@ RUN cd $DIRPATH/3rdparty/ff-petsc \
     && make petsc-slepc
 
 # Reconfigure and compile FreeFEM
-RUN ./reconfigure && make -j 1
+RUN ./reconfigure && make -j"$(nproc)"
 
 # Install FreeFEM
 RUN make install

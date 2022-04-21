@@ -2,4 +2,4 @@
 
 ## Build the docker for FreeFEM compilation
 echo -e "> Building FreeFEM Docker image"
-sudo docker build --network=host --tag freefem . --no-cache
+docker build --network=host --tag freefem . --no-cache
