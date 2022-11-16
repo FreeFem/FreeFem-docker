@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     automake \
     bison \
     cmake \
-    flex \
+    file flex \
     g++ \
     gfortran \
     git \
